@@ -1,0 +1,13 @@
+Storage Policy - {{ env_name | upper }}
+================================
+
+{% for lun in storage_luns %}
+LUN Name : {{ lun.name }}
+Size     : {{ lun.size }} GB
+Type     : {{ lun.type }}
+{% if lun.boot %}
+Bootable : YES
+{% endif %}
+--------------------------------
+{% endfor %}
+
