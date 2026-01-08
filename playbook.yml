@@ -1,0 +1,20 @@
+---
+
+- name: Generate infrastructure policies
+  hosts: localhost
+  gather_facts: no
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Generate storage policy
+      template:
+        src: templates/storage_policy.j2
+        dest: output/storage_policy.txt
+
+    - name: Generate boot policy
+      template:
+        src: templates/boot_policy.j2
+        dest: output/boot_policy.txt
+
