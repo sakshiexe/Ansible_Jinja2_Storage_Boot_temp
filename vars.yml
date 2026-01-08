@@ -1,0 +1,19 @@
+---
+
+env_name: dev
+
+storage_luns:
+  - name: os_disk
+    size: 120
+    type: SSD
+    boot: true
+
+  - name: data_disk
+    size: 500
+    type: HDD
+    boot: false
+  
+boot_order:
+  - local_disk
+  - san
+  - pxe
