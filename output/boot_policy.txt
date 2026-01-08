@@ -1,1 +1,9 @@
 
+Boot Policy
+===========
+
+Boot Order:
+- local_disk
+- san
+- pxe
+
